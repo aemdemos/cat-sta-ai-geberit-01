@@ -33,7 +33,7 @@
               ],
               "color": "rgba(148, 0, 211, 0.4)",
               "mapping": "header",
-              "customBlockName": ""
+              "customBlockName": "header"
             }
           ],
           "settings": {}
@@ -47,21 +47,6 @@
         {
           "id": "2-1",
           "blocks": [
-            {
-              "id": "box-id--916478256",
-              "x": 150,
-              "y": 138,
-              "width": 1280,
-              "height": 195,
-              "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]",
-              "layout": {
-                "numCols": 0,
-                "numRows": 0
-              },
-              "color": "rgb(75, 0, 130)",
-              "mapping": "defaultContent",
-              "customBlockName": "page-top"
-            },
             {
               "id": "box-id--2114860990",
               "x": 0,
