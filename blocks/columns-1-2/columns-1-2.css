@@ -16,6 +16,10 @@
   order: unset; /* Ensure the order is default */
 }
 
+.columns-1-2-wrapper .columns-1-2-img-col {
+  flex: 0 0 67%;
+}
+
 .columns-1-2-wrapper > .columns-1-2 > div > .columns-1-2-img-col {
   order: unset; /* Ensure the order is default */
   display: flex;
@@ -29,11 +33,7 @@
   display: block; /* Ensure the image is displayed as a block element */
 }
 
-.columns-1-2-wrapper .columns-1-2-img-col {
-  flex: 0 0 67%;
-}
-
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .columns-1-2-wrapper > .columns-1-2 > div {
     align-items: center; /* Ensure consistency across all screen sizes */
     flex-direction: row; /* Ensure horizontal alignment */

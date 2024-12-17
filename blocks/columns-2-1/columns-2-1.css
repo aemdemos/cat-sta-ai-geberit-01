@@ -40,7 +40,7 @@
   flex: 0 0 67%;
 }
 
-@media (min-width: 900px) { /* Correct the media query syntax */
+@media (width >= 900px) { /* Correct the media query syntax */
   .columns-2-1-wrapper > .columns-2-1 > div {
     align-items: center; /* Center items vertically */
     flex-direction: row; /* Ensure flex direction is row */
