@@ -8,6 +8,7 @@
 .columns-2-1-wrapper > .columns-2-1 {
   display: flex;
   width: 100%;
+  margin: 32px 0;
 }
 
 .columns-2-1-wrapper > .columns-2-1 > div {
@@ -18,7 +19,7 @@
 }
 
 .columns-2-1-wrapper .columns-2-1 > div > div {
-  flex: 1;
+  /* flex: 1; */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin */
   display: flex;
@@ -35,6 +36,10 @@
   height: auto;
 }
 
+.columns-2-1-wrapper .columns-2-1-img-col {
+  flex: 0 0 67%;
+}
+
 @media (min-width: 900px) { /* Correct the media query syntax */
   .columns-2-1-wrapper > .columns-2-1 > div {
     align-items: center; /* Center items vertically */
@@ -43,7 +48,7 @@
   }
 
   .columns-2-1-wrapper .columns-2-1 > div > div {
-    flex: 1;
+    /* flex: 1; */
     order: unset;
   }
 }
