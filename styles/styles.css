@@ -12,11 +12,11 @@
  */
 :root {
   --background-color: white;
-  --light-color: #f8f8f8;
+  --light-color: white;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #000;
+  --link-hover-color: #000;
   --body-font-family: "AktivGrotesk", "AktivGrotesk Fallback", "helvetica", "arial", "sans-serif";
   --heading-font-family: "AktivGrotesk", "AktivGrotesk Fallback", "helvetica", "arial", "sans-serif";
   --body-font-size-m: 22px;
@@ -131,7 +131,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 400;
+  text-transform: uppercase;
   line-height: 1.25;
   scroll-margin: 40px;
 }
