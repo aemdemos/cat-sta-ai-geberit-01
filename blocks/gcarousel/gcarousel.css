@@ -1,0 +1,93 @@
+
+.gcarousel-wrapper {
+    padding: 20px;
+}
+
+/* Add section title styling */
+.gcarousel-wrapper::before {
+    content: "VERWANDTE THEMEN EINBLICKE";
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gcarousel-wrapper .gcarousel-slides-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Ensure slides do not wrap */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Ensures snapping to slides */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slides {
+    display: flex;
+    flex-direction: row; /* Ensure slides are side by side */
+    flex-wrap: nowrap; /* Ensure slides do not wrap */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide {
+    flex: 0 0 calc(33.33% - 20px); /* Three slides per row with spacing */
+    box-sizing: border-box;
+    margin: 10px; /* Adjust spacing as needed */
+    scroll-snap-align: start; /* Ensures each slide starts at the beginning of the viewport */
+    display: flex; /* Ensure flexbox layout for content */
+    flex-direction: row; /* Align image and content side by side */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide .gcarousel-slide-image {
+    flex: 0 0 50%; /* Ensure image takes up half of the slide */
+    width: 50%;
+    height: auto;
+    margin-right: 10px; /* Space between image and text */
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide .gcarousel-slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text at the top */
+    padding: 10px;
+    background-color: transparent; /* Remove background color */
+    color: var(--text-color);
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide-content h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px; /* Ensure spacing between heading and paragraph */
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide-content p {
+    margin-top: 0;
+    margin-bottom: 10px; /* Ensure spacing between paragraphs */
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide-content .button-container {
+    margin-top: auto; /* Push button to the bottom */
+    text-align: left;
+}
+
+.gcarousel-wrapper .gcarousel .gcarousel-slide-content .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hide navigation buttons */
+.gcarousel-wrapper .gcarousel .gcarousel-navigation-buttons {
+    display: none;
+}
+
+/* Hide slide indicators */
+.gcarousel-wrapper .gcarousel .gcarousel-slide-indicators {
+    display: none;
+}

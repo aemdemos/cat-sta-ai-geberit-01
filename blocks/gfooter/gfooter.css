@@ -1,0 +1,61 @@
+
+.gfooter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.gfooter-wrapper .gfooter.block > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row; /* Ensure elements are aligned side by side */
+}
+
+.gfooter-wrapper .gfooter.block > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row; /* Ensure elements are aligned side by side */
+}
+
+.gfooter-wrapper .gfooter.block > div > div > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: row; /* Ensure list items are aligned side by side */
+}
+
+.gfooter-wrapper .gfooter.block > div > div > ul:first-of-type {
+  margin-left: auto; /* Pushes the icons to the right */
+}
+
+.gfooter-wrapper .gfooter.block > div > div > ul:first-of-type li {
+  margin-right: 10px;
+}
+
+.gfooter-wrapper .gfooter.block > div > div > ul:last-of-type {
+  margin-left: 20px; /* Adds spacing between text links */
+}
+
+.gfooter-wrapper .gfooter.block > div > div > ul:last-of-type li {
+  margin-left: 20px;
+}
+
+.gfooter-wrapper .gfooter.block > div > div > p {
+  margin: 0 20px;
+  white-space: nowrap;
+}
+
+.gfooter-wrapper .gfooter.block > div > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; /* Ensure elements are aligned side by side */
+  margin-right: auto; /* Pushes the icons to the right */
+}
