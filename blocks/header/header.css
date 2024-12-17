@@ -1,11 +1,11 @@
 
 .header-wrapper {
-  background-color: white;
   width: 100%;
   z-index: 2;
 }
 
 .header-wrapper .nav-wrapper {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
