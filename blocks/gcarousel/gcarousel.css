@@ -1,93 +1,113 @@
 
 .gcarousel-wrapper {
-    padding: 20px;
-}
-
-/* Add section title styling */
-.gcarousel-wrapper::before {
-    content: "VERWANDTE THEMEN EINBLICKE";
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .gcarousel-wrapper .gcarousel-slides-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* Ensure slides do not wrap */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Ensures snapping to slides */
-    scroll-behavior: smooth; /* Smooth scrolling */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slides {
-    display: flex;
-    flex-direction: row; /* Ensure slides are side by side */
-    flex-wrap: nowrap; /* Ensure slides do not wrap */
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
+.gcarousel-wrapper .gcarousel-navigation-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide {
-    flex: 0 0 calc(33.33% - 20px); /* Three slides per row with spacing */
-    box-sizing: border-box;
-    margin: 10px; /* Adjust spacing as needed */
-    scroll-snap-align: start; /* Ensures each slide starts at the beginning of the viewport */
-    display: flex; /* Ensure flexbox layout for content */
-    flex-direction: row; /* Align image and content side by side */
-    align-items: flex-start; /* Align items at the top */
+.gcarousel-wrapper .gcarousel-slides {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide .gcarousel-slide-image {
-    flex: 0 0 50%; /* Ensure image takes up half of the slide */
-    width: 50%;
-    height: auto;
-    margin-right: 10px; /* Space between image and text */
+.gcarousel-wrapper .gcarousel-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 100%;
+  transition: transform 0.5s ease;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide .gcarousel-slide-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align text at the top */
-    padding: 10px;
-    background-color: transparent; /* Remove background color */
-    color: var(--text-color);
+.gcarousel-wrapper .gcarousel-slide-image {
+  flex: 1;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide-content h4 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 10px; /* Ensure spacing between heading and paragraph */
+.gcarousel-wrapper .gcarousel-slide-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide-content p {
-    margin-top: 0;
-    margin-bottom: 10px; /* Ensure spacing between paragraphs */
+/* .gcarousel-wrapper .gcarousel-slide-content a {
+  color: var(--link-color);
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide-content .button-container {
-    margin-top: auto; /* Push button to the bottom */
-    text-align: left;
+.gcarousel-wrapper .gcarousel-slide-content a:hover {
+  color: var(--link-hover-color);
+} */
+
+.gcarousel-wrapper .gcarousel-slide-content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.gcarousel-wrapper .gcarousel .gcarousel-slide-content .button {
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
+.gcarousel-wrapper .gcarousel-slide-content p {
+  margin-bottom: 10px;
 }
 
-/* Hide navigation buttons */
-.gcarousel-wrapper .gcarousel .gcarousel-navigation-buttons {
-    display: none;
+.gcarousel-wrapper .gcarousel-slide-content .button-container {
+  margin-top: 20px;
+  align-self: flex-start;
 }
 
-/* Hide slide indicators */
-.gcarousel-wrapper .gcarousel .gcarousel-slide-indicators {
-    display: none;
+.gcarousel-wrapper .gcarousel-slide-content .button-container .button {
+  background-color: var(--link-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.gcarousel-wrapper .gcarousel-slide-content .button-container .button:hover {
+  background-color: var(--link-hover-color);
+}
+
+.gcarousel-wrapper .gcarousel-slide-indicators {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  background-color: transparent;
+}
+
+.gcarousel-wrapper .gcarousel-slide-indicator {
+  margin: 0 5px;
+}
+
+.gcarousel-wrapper .gcarousel-slide-indicator button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.gcarousel-wrapper .gcarousel-slide-indicator button[disabled] {
+  background-color: #000;
 }

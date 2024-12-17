@@ -1,48 +1,47 @@
 
-.columns-1-2-wrapper {
+.columns-1-2-wrapper > .columns-1-2 {
+  margin: 32px 0;
+}
+
+.columns-1-2-wrapper > .columns-1-2 > div {
   display: flex;
-  justify-content: center;
+  flex-direction: row; /* Ensure horizontal alignment */
+  gap: 8px; /* Further reduce the gap between the sections */
+  align-items: center; /* Align items in the center */
+}
+
+.columns-1-2-wrapper > .columns-1-2 > div > div {
+  /* flex: 1; Make sure both sections take up equal space */
+  padding: 0; /* Remove padding to reduce space above the text */
+  order: unset; /* Ensure the order is default */
+}
+
+.columns-1-2-wrapper > .columns-1-2 > div > .columns-1-2-img-col {
+  order: unset; /* Ensure the order is default */
+  display: flex;
   align-items: center;
+  justify-content: flex-end; /* Align the image to the right */
 }
 
-.columns-1-2.block {
-  display: flex;
-  width: 100%;
-  align-items: center; /* Align the items vertically in the center */
-}
-
-.columns-1-2.block > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.columns-1-2.block > div > div:first-child {
-  flex: 1;
-  padding: 0 20px; /* Fine-tune padding for better alignment */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.columns-1-2.block > div > div:last-child {
-  flex: 1;
-  padding: 0 20px; /* Fine-tune padding for better alignment */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.columns-1-2.block img {
-  max-width: 100%;
+.columns-1-2-wrapper > .columns-1-2 > div > .columns-1-2-img-col img {
+  max-width: 100%; /* Ensure the image fits within its container */
   height: auto;
+  display: block; /* Ensure the image is displayed as a block element */
+}
+
+.columns-1-2-wrapper .columns-1-2-img-col {
+  flex: 0 0 67%;
 }
 
 @media (min-width: 900px) {
-  .columns-1-2.block > div {
-    flex-direction: row;
-    gap: 8px; /* Fine-tune gap for better alignment */
+  .columns-1-2-wrapper > .columns-1-2 > div {
+    align-items: center; /* Ensure consistency across all screen sizes */
+    flex-direction: row; /* Ensure horizontal alignment */
+    gap: 8px; /* Maintain the smaller gap between the sections */
+  }
+
+  .columns-1-2-wrapper > .columns-1-2 > div > div {
+    /* flex: 1; */
+    order: unset;
   }
 }

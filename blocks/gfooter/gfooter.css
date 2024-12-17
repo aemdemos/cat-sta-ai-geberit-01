@@ -1,61 +1,45 @@
 
 .gfooter-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-}
-
-.gfooter-wrapper .gfooter.block > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  flex-direction: row; /* Ensure elements are aligned side by side */
+  padding: 20px 0; /* Add some padding to the top and bottom */
 }
 
 .gfooter-wrapper .gfooter.block > div > div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  flex-direction: row; /* Ensure elements are aligned side by side */
+  flex-direction: column; /* Ensure elements are aligned horizontally */
+  align-items: center; /* Vertically center the child elements */
+  width: 100%; /* Ensure the inner container spans the full width */
+  justify-content: space-between; /* Space the inner elements evenly */
 }
 
-.gfooter-wrapper .gfooter.block > div > div > ul {
-  display: flex;
-  list-style: none;
+.gfooter-wrapper .gfooter.block ul {
+  list-style: none; /* Remove default list styling */
   padding: 0;
   margin: 0;
-  flex-direction: row; /* Ensure list items are aligned side by side */
-}
-
-.gfooter-wrapper .gfooter.block > div > div > ul:first-of-type {
-  margin-left: auto; /* Pushes the icons to the right */
-}
-
-.gfooter-wrapper .gfooter.block > div > div > ul:first-of-type li {
-  margin-right: 10px;
-}
-
-.gfooter-wrapper .gfooter.block > div > div > ul:last-of-type {
-  margin-left: 20px; /* Adds spacing between text links */
-}
-
-.gfooter-wrapper .gfooter.block > div > div > ul:last-of-type li {
-  margin-left: 20px;
-}
-
-.gfooter-wrapper .gfooter.block > div > div > p {
-  margin: 0 20px;
-  white-space: nowrap;
-}
-
-.gfooter-wrapper .gfooter.block > div > div:first-of-type {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row; /* Ensure list items are aligned horizontally */
   align-items: center;
-  flex-direction: row; /* Ensure elements are aligned side by side */
-  margin-right: auto; /* Pushes the icons to the right */
+}
+
+.gfooter-wrapper .gfooter.block ul li {
+  margin: 0 10px; /* Add space between list items */
+}
+
+.gfooter-wrapper .gfooter.block ul:first-of-type {
+  order: 1; /* Move the first ul to the right */
+  margin-left: auto; /* Ensure it stays on the far right */
+}
+
+.gfooter-wrapper .gfooter.block p {
+  order: 2; /* Ensure the paragraph is centrally aligned */
+  margin: 0 20px; /* Add some margin around the paragraph */
+  white-space: nowrap; /* Prevent text from wrapping */
+  flex-grow: 0; /* Allow the paragraph to take up available space */
+  text-align: center; /* Center the text */
+  margin-left: auto; /* Ensure it stays on the far right */
+}
+
+.gfooter-wrapper .gfooter.block ul:last-of-type {
+  order: 2; /* Ensure the last ul is on the far left */
+  margin-left: auto; /* Ensure it stays on the far right */
+  flex-grow: 1; /* Allow the list to grow */
 }
